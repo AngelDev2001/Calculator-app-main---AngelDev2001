@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root{
+    --VeryDarkDesaturatedBlueMain: hsl(222, 26%, 31%);
+    --VeryDarkDesaturatedBlueKey: hsl(223, 31%, 20%);
+    --VeryDarkDesaturatedBlueDisplay: hsl(224, 36%, 15%);
+    --DesaturatedDarkBlueBGKey: hsl(225, 21%, 49%);
+    --DesaturatedDarkBlueBGKeyGrow: hsl(225, 21%, 80%);
+    --DesaturatedDarkBlueKey: hsl(224, 28%, 35%);
+    --Red: hsl(6, 63%, 50%);
+    --RedGrow: hsl(6, 63%, 80%);
+    --DarkRed: hsl(6, 70%, 34%);
+    --LightGrayishOrange: hsl(30, 25%, 89%);
+    --GrayishOrange: hsl(28, 16%, 65%);
+    --VeryDarkGrayishBlue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+    --LightGray: hsl(0, 0%, 90%);
+    --GrayishRed: hsl(0, 5%, 81%);
+    --VeryLightGray: hsl(0, 0%, 93%);
+    --DarkModerateCyan: hsl(185, 42%, 37%);
+    --DarkModerateCyanGrow: hsl(185, 42%, 60%);
+    --VeryDarkCyan: hsl(185, 58%, 25%);
+    --Orange: hsl(25, 98%, 40%);
+    --OrangeGrow: hsl(25, 98%, 60%);
+    --DarkOrange: hsl(25, 99%, 27%);
+    --LightGrayishYellow: hsl(45, 7%, 89%);
+    --DarkGrayishOrange: hsl(35, 11%, 61%);
+    --VeryDarkGrayishYellow: hsl(60, 10%, 19%);
+    --White: hsl(0, 0%, 100%);
+    --VeryDarkViolet: hsl(268, 75%, 9%);
+    --VeryDarkVioletKeyPad: hsl(268, 71%, 12%);
+    --DarkViolet: hsl(281, 89%, 26%);
+    --DarkVioletGrow: hsl(281, 89%, 60%);
+    --VividMagenta: hsl(285, 91%, 52%);
+    --PureCyan: hsl(176, 100%, 44%);
+    --PureCyanGrow: hsl(176, 100%, 60%);
+    --SoftCyan: hsl(177, 92%, 70%);
+    --VeryDarkVioletKey: hsl(268, 47%, 21%);
+    --DarkMagenta: hsl(290, 70%, 36%);
+    --DarkMagentaGrow: hsl(285, 91%, 52%);
+    --LightYellow: hsl(52, 100%, 62%);
+    --VeryDarkBlue: hsl(198, 20%, 13%);
+    --White: hsl(0, 0%, 100%);
+    --font-LeagueSpartan: 'League Spartan', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-LeagueSpartan);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* CALCULATOR */
+.calculator{
+    width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* CALCULATOR HEADER */
+.calculator__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 60px;
+}
+
+/* CALCULATOR HEADER TITLE */
+.calculator__header-title{
+    color: var(--White);
+}
+
+/* CALCULATOR OPTIONS */
+.calculator__options{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* CALCULATOR OPTIONS TITLE */
+.calculator__options-title{
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/* CALCULATOR OPTIONS TITLE */
+.calculator__form-inputRange{
+    width: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* CALCULATOR INPUT RANGE - MODIFY */
+.calculator__form-inputRange::-moz-range-track{
+    width: 100%;
+    height: 100%;
+    background-color: var(--VeryDarkDesaturatedBlueKey);
+}
+
+.calculator__form-inputRange::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+}
+
+.calculator__form-inputRange::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    border: none;
+}
+
+.calculator__form-inputRange::-moz-range-thumb{
+    border-radius: 50%;
+    border: none;
+    background-color: var(--Red);
+}
+
+/* CALCULATOR FORM CONTAINER INPUT */
+.calculator__form-containerImput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3125rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+/* CONTAINER FORM NUMBERS */
+.calculator__form-numbers{
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    top: -18px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: .85rem;
+}
+
+/* DISPLAY */
+.calculator__display{
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    text-align: right;
+    font-size: 3rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* KEYPAD */
+.calculator__keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 3.5rem;
+    gap: 1.2rem;
+    padding: 1.2rem;
+    border-radius: 10px;
+}
+
+/* KEYS */
+.calculator__keypad-key{
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .75rem;
+    border: none;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+}
+
+.calculator__keypad-key:active{
+    transform: translateY(4px);
+    box-shadow: 0 0;
+}
+
+/* KEY RESET AND KEY RESULT */
+.calculator__keypad-keyReset,
+.calculator__keypad-keyResult{
+    grid-column: span 2;
+    color: var(--White);
+}
+
+/* CALCULATOR ONE */
+
+.container-one{
+    background-color: var(--VeryDarkDesaturatedBlueMain);
+}
+
+.calculator-one{
+    background-color: var(--VeryDarkDesaturatedBlueMain);
+}
+
+.calculator__header-title-one{
+    color: var(--White);
+}
+
+.calculator__options-title-one{
+    color: var(--White);
+}
+
+.calculator__form-containerImput-one{
+    background-color: var(--VeryDarkDesaturatedBlueKey);
+}
+
+.calculator__form-inputRange-one::-webkit-slider-runnable-track{
+    background-color: var(--VeryDarkDesaturatedBlueKey);
+}
+
+.calculator__form-inputRange-one::-moz-range-track{
+    background-color: var(--VeryDarkDesaturatedBlueKey);
+}
+
+.calculator__form-inputRange-one::-webkit-slider-thumb{
+    background-color: var(--Red);
+}
+
+.calculator__form-inputRange-one::-moz-range-thumb{
+    background-color: var(--Red);
+}
+
+.calculator__form-inputRange-one::-webkit-slider-thumb:active{
+    background-color: var(--RedGrow);
+}
+
+.calculator__form-inputRange-one::-moz-range-thumb:active {
+    background-color: var(--RedGrow);
+}
+
+.calculator__form-numbers-one{
+    color: var(--White);
+}
+
+.calculator__display-one{
+    background-color: var(--VeryDarkDesaturatedBlueDisplay);
+    color: var(--White);
+}
+
+.calculator__keypad-one{
+    background-color: var(--VeryDarkDesaturatedBlueKey);
+}
+
+.calculator__keypad-key-one{
+    background-color: var(--LightGrayishOrange);
+    color: var(--VeryDarkGrayishBlue);
+    box-shadow: 0 4px var(--GrayishOrange);
+}
+
+.calculator__keypad-key-one:active{
+    background-color: var(--White);
+}
+
+.calculator__keypad-keyReset-one,
+.calculator__keypad-keyDeleted-one{
+    background-color: var(--DesaturatedDarkBlueBGKey);
+    color: var(--White);
+    box-shadow: 0 4px var(--DesaturatedDarkBlueKey);
+}
+
+.calculator__keypad-keyResult-one{
+    background-color: var(--Red);
+    color: var(--White);
+    box-shadow: 0 4px var(--DarkRed);
+}
+
+.calculator__keypad-keyReset-one:active,
+.calculator__keypad-keyDeleted-one:active{
+    background-color: var(--DesaturatedDarkBlueBGKeyGrow);
+}
+
+.calculator__keypad-keyResult-one:active{
+    background-color: var(--RedGrow);
+}
+
+/* CALCULATOR TWO */
+.container-two{
+    background-color: var(--LightGray);
+}
+
+.calculator-two{
+    background-color: var(--LightGray);
+}
+
+.calculator__header-title-two{
+    color: var(--VeryDarkGrayishYellow);
+}
+
+.calculator__options-title-two{
+    color: var(--VeryDarkGrayishYellow);
+}
+
+.calculator__form-containerImput-two{
+    background-color: var(--GrayishRed);
+}
+
+.calculator__form-inputRange-two::-webkit-slider-runnable-track{
+    background-color: var(--GrayishRed);
+}
+
+.calculator__form-inputRange-two::-moz-range-track{
+    background-color: var(--GrayishRed);
+}
+
+.calculator__form-inputRange-two::-webkit-slider-thumb{
+    background-color: var(--Orange);
+}
+
+.calculator__form-inputRange-two::-moz-range-thumb{
+    background-color: var(--Orange);
+}
+
+.calculator__form-inputRange-two::-webkit-slider-thumb:active{
+    background-color: var(--OrangeGrow);
+}
+
+.calculator__form-inputRange-two::-moz-range-thumb:active{
+    background-color: var(--OrangeGrow);
+}
+
+.calculator__form-numbers-two{
+    color: var(--VeryDarkGrayishYellow);
+}
+
+.calculator__keypad-two{
+    background-color: var(--GrayishRed);
+}
+
+.calculator__display-two{
+    background-color: var(--VeryLightGray);
+    color: var(--VeryDarkGrayishYellow);
+}
+
+.calculator__keypad-key-two{
+    background-color: var(--LightGrayishYellow);
+    color: var(--VeryDarkGrayishYellow);
+    box-shadow: 0 4px var(--DarkGrayishOrange);
+}
+
+.calculator__keypad-key-two:active{
+    background-color: var(--White);
+}
+
+.calculator__keypad-keyReset-two,
+.calculator__keypad-keyDeleted-two{
+    background-color: var(--DarkModerateCyan);
+    color: var(--White);
+    box-shadow: 0 4px var(--VeryDarkCyan);
+}
+
+.calculator__keypad-keyResult-two{
+    background-color: var(--Orange);
+    color: var(--White);
+    box-shadow: 0 4px var(--DarkOrange);
+}
+
+.calculator__keypad-keyReset-two:active,
+.calculator__keypad-keyDeleted-two:active{
+    background-color: var(--DarkModerateCyanGrow);
+}
+
+.calculator__keypad-keyResult-two:active{
+    background-color: var(--OrangeGrow);
+}
+
+/* CALCULATOR THREE */
+.container-three{
+    background-color: var(--VeryDarkViolet);
+}
+
+.calculator-three{
+    background-color: var(--VeryDarkViolet);
+}
+
+.calculator__header-title-three{
+    color: var(--LightYellow);
+}
+
+.calculator__options-title-three{
+    color: var(--LightYellow);
+}
+
+.calculator__form-containerImput-three{
+    background-color: var(--VeryDarkVioletKeyPad);
+}
+
+.calculator__form-inputRange-three::-webkit-slider-runnable-track{
+    background-color: var(--VeryDarkVioletKeyPad);
+}
+
+.calculator__form-inputRange-three::-moz-range-track{
+    background-color: var(--VeryDarkVioletKeyPad);
+}
+
+.calculator__form-inputRange-three::-webkit-slider-thumb{
+    background-color: var(--PureCyan);
+}
+
+.calculator__form-inputRange-three::-moz-range-thumb{
+    background-color: var(--PureCyan);
+}
+
+.calculator__form-inputRange-three::-webkit-slider-thumb:active{
+    background-color: var(--PureCyanGrow);
+}
+
+.calculator__form-inputRange-three::-moz-range-thumb:active{
+    background-color: var(--PureCyanGrow);
+}
+
+.calculator__form-numbers-three{
+    color: var(--LightYellow);
+}
+
+.calculator__keypad-three{
+    background-color: var(--VeryDarkVioletKeyPad);
+}
+
+.calculator__display-three{
+    background-color: var(--VeryDarkVioletKeyPad);
+    color: var(--LightYellow);
+}
+
+.calculator__keypad-key-three{
+    background-color: var(--VeryDarkVioletKey);
+    color: var(--LightYellow);
+    box-shadow: 0 4px var(--DarkMagenta);
+
+}
+.calculator__keypad-key-three:active{
+    background-color: var(--DarkMagentaGrow);
+}
+
+.calculator__keypad-keyReset-three,
+.calculator__keypad-keyDeleted-three{
+    background-color: var(--DarkViolet);
+    color: var(--White);
+    box-shadow: 0 4px var(--VividMagenta);
+}
+
+.calculator__keypad-keyResult-three{
+    background-color: var(--PureCyan);
+    color: var(--VeryDarkBlue);
+    box-shadow: 0 4px var(--SoftCyan);
+}
+
+.calculator__keypad-keyReset-three:active,
+.calculator__keypad-keyDeleted-three:active{
+    background-color: var(--DarkVioletGrow);
+}
+
+.calculator__keypad-keyResult-three:active{
+    background-color: var(--PureCyanGrow);
+}
+
+@media only screen and (max-width: 576px){
+    .calculator{
+        width: 90%;
+    }
+}
+

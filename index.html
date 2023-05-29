@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="coloCalculadora" class="calculator">
+      <div class="calculator__header">
+        <h1 class="calculator__header-title">calc</h1>
+        <div class="calculator__options">
+          <p class="calculator__options-title">theme</p>
+          <form class="calculator__form">
+            <div class="calculator__form-containerImput">
+              <input class="calculator__form-inputRange" type="range" min="1" max="3" value="1" id="rango">
+              <div class="calculator__form-numbers">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="calculator__display"></div>
+      <div class="calculator__keypad">
+        <button class="calculator__keypad-key">7</button>
+        <button class="calculator__keypad-key">8</button>
+        <button class="calculator__keypad-key">9</button>
+        <button class="calculator__keypad-key calculator__keypad-keyDeleted">DEL</button>
+        <button class="calculator__keypad-key">4</button>
+        <button class="calculator__keypad-key">5</button>
+        <button class="calculator__keypad-key">6</button>
+        <button class="calculator__keypad-key">+</button>
+        <button class="calculator__keypad-key">1</button>
+        <button class="calculator__keypad-key">2</button>
+        <button class="calculator__keypad-key">3</button>
+        <button class="calculator__keypad-key">-</button>
+        <button class="calculator__keypad-key">.</button>
+        <button class="calculator__keypad-key">0</button>
+        <button class="calculator__keypad-key">/</button>
+        <button class="calculator__keypad-key">x</button>
+        <button class="calculator__keypad-key calculator__keypad-keyReset">RESET</button>
+        <button class="calculator__keypad-key calculator__keypad-keyResult">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
